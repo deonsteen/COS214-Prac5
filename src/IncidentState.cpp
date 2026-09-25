@@ -5,21 +5,21 @@ using namespace std;
 void IncidentState::dispatch(Incident &incident)
 {
     ostringstream oss;
-    oss << "Incident id: " << incident.id() << " cannot be dispatched from state:" << name();
+    oss << "Incident #" << incident.id() << " cannot be dispatched from state: " << name();
     string msg = oss.str();
     throw InvalidTransition(msg);
 }
 void IncidentState::startWork(Incident &incident)
 {
     ostringstream oss;
-    oss << "Incident id: " << incident.id() << " cannot start work from state:" << name();
+    oss << "Incident #" << incident.id() << " cannot start work from state: " << name();
     string msg = oss.str();
     throw InvalidTransition(msg);
 }
 void IncidentState::resolve(Incident &incident)
 {
     ostringstream oss;
-    oss << "Incident id: " << incident.id() << "cannot be resolved from state:" << name();
+    oss << "Incident #" << incident.id() << " cannot be resolved from state: " << name();
     string msg = oss.str();
     throw InvalidTransition(msg);
 }
@@ -33,7 +33,7 @@ void ReportedState::dispatch(Incident &incident)
     // dispatched state makes a new state on heap
     // unique_ptr<IncidentState> wraps the pointer to the base class IncidentState
     // changeState only accepts a unique_ptr<IncidentState>
-    //  Dispatched counts as it inherits from IncidentState
+    // Dispatched counts as it inherits from IncidentState
     // incident.changeState(...) changes ownership to the incident
     // changeState swaps the incidents current state, and destroys the old one
     incident.changeState(unique_ptr<IncidentState>(new DispatchedState()));
