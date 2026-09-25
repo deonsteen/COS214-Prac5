@@ -1,9 +1,6 @@
 #include "IncidentState.h"
 #include <sstream>
 
-// TODO: small helper to build a consistent InvalidTransition message, e.g.
-// "Incident #<id> (<stateName>): cannot <action> from this state"
-// (used by the three base-class default methods below)
 using namespace std;
 void IncidentState::dispatch(Incident &incident)
 {
