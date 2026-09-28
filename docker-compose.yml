@@ -1,0 +1,26 @@
+services:
+  campusguard:
+    build: .
+    container_name: campusguard
+    stdin_open: true
+    tty: true
+
+  valgrind:
+    build: .
+    profiles: ["tools"]
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    entrypoint: ["valgrind", "--leak-check=full", "--track-origins=yes", "./campusguard"]
+
+  gdb:
+    build: .
+    profiles: ["tools"]
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    stdin_open: true
+    tty: true
+    entrypoint: ["gdb", "./campusguard"]
