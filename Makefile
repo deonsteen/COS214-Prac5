@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall -Wextra -pedantic -Werror -Iinclude
+CXXFLAGS = -std=c++11 -g -O0 -Wall -Wextra -pedantic -Werror -Iinclude
 
 SRC_DIR = src
 TEST_DIR = tests
