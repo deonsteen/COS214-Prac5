@@ -86,6 +86,6 @@ docker-compose.yml    services: campusguard (default), valgrind and gdb (profile
 
 | Member | Name | Responsibilities |
 |---|---|---|
-| A | Deon [surname, student number] | State and Observer: `Incident`, the incident states, dashboard and logger |
-| B | Yariv [surname, student number] | Command and Adapter: commands, console, access control, legacy PA and adapter, Scenario 2, Makefile and Docker |
-| C | Takunda Mugwagwa [student number] | Mediator and Facade: coordinator, response units, facade, `CampusGuardSystem`, Scenario 1, `main.cpp`, integration |
+| A | Deon Steenkamp - u25135742 | State and Observer: `Incident`, the incident states, dashboard and logger |
+| B | Yariv Singh- u24612082 | Command and Adapter: commands, console, access control, legacy PA and adapter, Scenario 2, Makefile and Docker |
+| C | Takunda Mugwagwa — u24667341| Mediator and Facade: coordinator, response units, facade, `CampusGuardSystem`, Scenario 1, `main.cpp`, integration |
