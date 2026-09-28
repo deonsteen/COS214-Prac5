@@ -16,8 +16,7 @@ bool AccessControlSystem::setMode(const std::string& area, AccessMode mode) {
         std::cout << "[Access] unknown area '" << area << "'\n";
         return false;
     }
-    std::cout << "[Access] " << area << ": " << toString(it->second)
-              << " -> " << toString(mode) << "\n";
+    std::cout << "[Access] " << area << ": " << toString(it->second)<< " -> " << toString(mode) << "\n";
     it->second = mode;
     return true;
 }
